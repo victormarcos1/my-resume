@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="resume">
+        <button id="toggle-sidebar">☰</button>
+<aside>
+
+    <script>
+        document.getElementById('toggle-sidebar').addEventListener('click', function() {
+            var sidebar = document.querySelector('aside');
+            sidebar.classList.toggle('collapsed');
+            if(sidebar.classList.contains('collapsed')) {
+                this.style.left = "5%"; // Adjust button position when collapsed
+            } else {
+                this.style.left = "30%"; // Reset button position when expanded
+            }
+        });
+        </script>
+        
+        
+        
+        
+                  
+
+            <section class="profile">
+                <img src="VM-logo.png" alt="" class="profile-photo" style="width: 50px;">
+                <h2>About Me</h2>
+                <p>Hi, I'm Victor Marcos, welcome to my portfolio.</p>
+            </section>
+            <section class="contact-info">
+                <h2>Contact Info</h2>
+                <ul>
+                    <li>Phone: +1 516 734 6035</li>
+                    <li>Email: victormarcos1@yahoo.com</li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/victormarcos1">linkedin.com/in/victormarcos1<a></a></li>
+                </ul>
+            </section>
+        </aside>
+        <main>
+            <section class="experience">
+                <h1 style="background-color: rgba(255, 255, 255, 0); line-height: 50px; height: 50px; text-align: center;">Languages</h1>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="All_Coding_Languages.png">
+                </div>
+                
+
+                <h1 style="background-color: rgba(255, 255, 255, 0); line-height: 50px; height: 50px; text-align: center;">Certificates</h1>
+
+                <section class="projects">
+                
+                    <div class="project">
+                        <a href="https://www.appacademy.com" target="_blank">
+                            <img src="aa-bootcamp.png" alt="App Academy">
+                            <div class="project-info">
+                                <h3>App Academy</h3>
+                                </div>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a href="https://www.theodinproject.com" target="_blank">
+                            <img src="odinproject.png" alt="Odin Project">
+                            <div class="project-info">
+                                <h3>The Odin Project</h3>
+                                </div>
+                        </a>
+                    </div>
+    
+                    <div class="project">
+                        <a href="https://www.freecodecamp.org" target="_blank">
+                            <img src="freecodecamp.png" alt="LifeSource Pathways Project">
+                            <div class="project-info">
+                                <h3>freeCodeCamp</h3>
+                                </div>
+                        </a>
+                    </div>
+                    <!-- Additional projects can be added here -->
+                </section>
+
+            <h1 style="background-color: rgba(255, 255, 255, 0); line-height: 50px; height: 50px; text-align: center;">My Projects</h1>
+
+            <section class="projects">
+                
+                <div class="project">
+                    <a href="https://www.lifesource.com" target="_blank">
+                        <img src="life-source-preview.png" alt="LifeSource Project">
+                        <div class="project-info">
+                            <h3>LifeSource</h3>
+                            <p>This project involved developing a comprehensive platform for health management. It has been instrumental in providing resources and tools for better health oversight.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#" target="_blank">
+                        <img src="life-source-pathway-preview.png" alt="LifeSource Pathways Project (Work In Progress)">
+                        <div class="project-info">
+                            <h3>LifeSource Pathways (Work In Progress)</h3>
+                            <p>This platform streamlines attorney recruitment by matching law firms with qualified candidates through an intuitive and efficient online system. It enhances the hiring process with powerful tools and insights, making it easier for firms to find the right legal talent.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project">
+                    <a href="https://www.lifesourcepathways.com" target="_blank">
+                        <img src="old-pathways-preview.png" alt="LifeSource Pathways Project">
+                        <div class="project-info">
+                            <h3>LifeSource Pathways</h3>
+                            <p>This platform streamlines attorney recruitment by matching law firms with qualified candidates through an intuitive and efficient online system. It enhances the hiring process with powerful tools and insights, making it easier for firms to find the right legal talent.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Additional projects can be added here -->
+            </section>
+
+            <script>
+                document.getElementById('toggle-sidebar').addEventListener('click', function() {
+                    var sidebar = document.querySelector('aside');
+                    sidebar.classList.toggle('collapsed');
+                    this.style.left = sidebar.classList.contains('collapsed') ? "5%" : "30%";
+                });
+            </script>
+            
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: rgba(38, 14, 45);
+}
+
+/* If the text readability is affected by the image, you can add a semi-transparent overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust color and opacity to your preference */
+    z-index: -1; /* Ensures the overlay is behind the content but above the background */
+}
+
+.resume {
+    display: flex;
+    min-height: 100vh;
+}
+
+aside {
+    width: 250px;
+    background: linear-gradient(to bottom, #411f4c, #270e30);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+    z-index: 1000;
+}
+
+#toggle-sidebar {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 12px;
+    background: linear-gradient(#411f4c #270e30);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.collapsed {
+    transform: translateX(-100%);
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #aa8eb3, #826a8b);
+    margin-left: 250px;
+    transition: margin-left 0.5s ease;
+}
+
+aside.collapsed + main {
+    margin-left: 0;
+}
+
+.projects {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 5px 15px rgba(65, 31, 76);
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-info {
+    padding: 15px;
+    text-align: left; /* Ensures text alignment is consistent */
+}
+
+.project-info h3 {
+    margin-top: 0;
+}
+
+.project-info p {
+    color: #666;
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
